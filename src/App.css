@@ -22,6 +22,13 @@ body {
 	background-color: #eaffd0;
 }
 
+.center-book {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
 img {
 	margin-top: 20px;
 	max-width: 125px;
@@ -40,6 +47,9 @@ h1:hover {
 }
 
 .add-book {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	margin-bottom: 100px;
 }
 
@@ -227,4 +237,8 @@ input[type='checkbox']:focus {
 
 .delete:hover {
 	color: #ff2800;
+}
+
+.hidden {
+	display: none;
 }

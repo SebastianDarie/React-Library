@@ -1,18 +1,13 @@
 import React from 'react'
+import books from '../img/books.png'
 
 const Header = () => {
 	return (
-		<div>
+		<div className='center-book'>
 			<div>
-				<img src='../img/books.png' alt='books'></img>
+				<img src={books} alt='books'></img>
 			</div>
 			<h1>My Library</h1>
-
-			<div className='add-book'>
-				<button id='modal-btn' className='button'>
-					New Book
-				</button>
-			</div>
 		</div>
 	)
 }
