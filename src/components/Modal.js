@@ -10,10 +10,6 @@ class Modal extends React.Component {
 		e.target.parentNode.parentNode.parentNode.style.display = 'none'
 	}
 
-	outsideClick = (e) => {
-		console.log(e.currentTarget.parentNode)
-	}
-
 	render() {
 		return (
 			<div className='add-book'>
@@ -25,7 +21,7 @@ class Modal extends React.Component {
 				</button>
 
 				<div id='my-modal' className='modal'>
-					<div className='modal-content' onClick={this.outsideClick}>
+					<div className='modal-content'>
 						<div className='modal-header'>
 							<span onClick={this.closeModal} className='close'>
 								&times;

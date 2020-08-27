@@ -6,6 +6,7 @@ class ModalForm extends Component {
 		author: '',
 		pages: '',
 		read: false,
+		id: Date.now().toString(),
 	}
 
 	changeRead = () => this.setState({ read: !this.state.read })
@@ -17,27 +18,23 @@ class ModalForm extends Component {
 			this.state.title,
 			this.state.author,
 			this.state.pages,
-			this.state.read
+			this.state.read,
+			this.state.id
 		)
 
 		e.target.reset()
 		e.target.parentNode.parentNode.parentNode.style.display = 'none'
 
+		this.setState({
+			title: '',
+			author: '',
+			pages: '',
+			read: false,
+			id: Date.now().toString(),
+		})
+
 		e.preventDefault()
 	}
-
-	// formSubmit = (e) => {
-	// 	const form = e.target
-	// 	const title = form.elements['title'].value
-	// 	const author = form.elements['author'].value
-	// 	const pages = form.elements['pages'].value
-	// 	const read = form.elements['read'].value
-
-	// 	form.reset()
-	// 	form.parentNode.parentNode.parentNode.style.display = 'none'
-
-	// 	e.preventDefault()
-	// }
 
 	render() {
 		return (
