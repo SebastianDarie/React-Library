@@ -40,6 +40,7 @@ class App extends React.Component {
 	}
 
 	inLibrary = (book) => {
+		// eslint-disable-next-line array-callback-return
 		return this.state.books.some((item) => {
 			if (item.title === book.title && item.author === book.author)
 				return true
