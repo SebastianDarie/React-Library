@@ -7,7 +7,9 @@ import './App.css'
 
 class App extends React.Component {
 	state = {
-		books: JSON.parse(localStorage.getItem('books')),
+		books: JSON.parse(localStorage.getItem('books'))
+			? JSON.parse(localStorage.getItem('books'))
+			: [],
 	}
 
 	componentDidMount() {
